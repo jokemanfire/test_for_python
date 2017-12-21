@@ -1,0 +1,17 @@
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>XSS原理重现</title> 
+</head> 
+<script src="js/jquery.min.js"></script>
+<span id="text" style="color: red;"></span></br>
+        <input type="txt" id="btn" /></br>
+        <button id="sub">提交</button>
+        <script>
+            $('#sub').click(function(){
+                $('#text').html("欢迎"+$('#btn').val());
+            })
+        </script>
+    
+</body> 
+</html> 

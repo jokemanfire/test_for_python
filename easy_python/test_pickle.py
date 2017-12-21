@@ -1,0 +1,10 @@
+import pickle
+d = dict(name = "ss" , age = 12)
+pickle.dumps(d)
+f = open("dumps.txt","wb")
+pickle.dump(d,f)
+f.close()
+f = open("dumps.txt","rb")
+d = pickle.load(f)
+f.close()
+print(d)
